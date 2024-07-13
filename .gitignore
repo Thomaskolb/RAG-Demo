@@ -1,6 +1,7 @@
 # Other
 atlas/
 data/
+faiss/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
