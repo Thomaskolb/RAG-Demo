@@ -52,6 +52,7 @@ def retrieval_augmented_generation(
         generation_num_beams,
         generation_length_penalty,
         context_size,
+        seed,
         question
     ):
     
@@ -69,7 +70,8 @@ def retrieval_augmented_generation(
     sys.argv = args
     options = get_options()
     opt = options.parse()
-    torch.manual_seed(opt.seed)
+    torch.manual_seed(seed)
+    slurm.init_distributed_mode(opt)
     
     # Load ATLAS
     model, _, _, _, _, opt, _ = load_or_initialize_atlas_model(opt, eval_only=True)
