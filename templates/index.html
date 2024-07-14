@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAG Demo</title>
+</head>
+<body>
+    <h1>Retrieval Augmented Generation - ATLAS</h1>
+    <form method="POST">
+        <h2>Paths</h2>
+
+        <label for="atlas_path">Atlas path:</label>
+        <input type="text" id="atlas_path" name="atlas_path" value="{{ atlas_path }}" size="70"><br><br>
+
+        <label for="model_path">Atlas model path:</label>
+        <input type="text" id="model_path" name="model_path" value="{{ model_path }}" size="70"><br><br>
+
+        <label for="faiss_index_path">Faiss index path:</label>
+        <input type="text" id="faiss_index_path" name="faiss_index_path" value="{{ faiss_index_path }}" size="70"><br><br>
+
+        <label for="passages_path">Passages path:</label>
+        <input type="text" id="passages_path" name="passages_path" value="{{ passages_path }}" size="70"><br><br>
+
+        <label for="duckdb_faiss_path">Duckdb faiss path:</label>
+        <input type="text" id="duckdb_faiss_path" name="duckdb_faiss_path" value="{{ duckdb_faiss_path }}" size="70"><br><br>
+
+        <h2>Configuration</h2>
+
+        <label for="reader_model">Reader model:</label>
+        <input type="text" id="reader_model" name="reader_model" value="{{ reader_model }}"><br><br>
+
+        <label for="reader_device">Reader GPU:</label>
+        <input type="text" id="reader_device" name="reader_device" value="{{ reader_device }}"><br><br>
+
+        <label for="generation_min_length">Generation - min length:</label>
+        <input type="number" id="generation_min_length" name="generation_min_length" value="{{ generation_min_length }}"><br><br>
+
+        <label for="generation_max_length">Generation - max length:</label>
+        <input type="number" id="generation_max_length" name="generation_max_length" value="{{ generation_max_length }}"><br><br>
+
+        <label for="generation_num_beams">Generation - number of beams:</label>
+        <input type="number" id="generation_num_beams" name="generation_num_beams" value="{{ generation_num_beams }}"><br><br>
+
+        <label for="generation_length_penalty">Generation - length penalty:</label>
+        <input type="number" id="generation_length_penalty" name="generation_length_penalty" value="{{ generation_length_penalty }}"><br><br>
+
+        <label for="context_size">Context size:</label>
+        <input type="number" id="context_size" name="context_size" value="{{ context_size }}"><br><br>
+
+        <h2>Query</h2>
+
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question" value="{{ question }}" size="70"><br><br>
+
+        <button type="submit">Generate answer</button>
+    </form>
+    <p>Answer: {{ result }}</p>
+</body>
+</html>
