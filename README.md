@@ -2,11 +2,23 @@
 With this repository we created a Retrieval Augmented Generation demo using the duckdb faiss extension for the retrieval part, and ATLAS for creating the embeddings and generating the final output.
 
 # How to install
-1. Clone atlas: ```git clone https://github.com/facebookresearch/atlas.git``
+1. Clone atlas: 
+```
+git clone https://github.com/facebookresearch/atlas.git
+```
 2. Create a python environment
-3. Install torch: ``pip install torch==1.11.0+cu113 -f https://download.pytorch.org/whl/torch_stable.html``
-4. Install FAISS with GPU support: ``pip install faiss-gpu==1.7.2``
-5. Install requirements: ``pip install -r requirements.txt``
+3. Install torch:
+```
+pip install torch==1.11.0+cu113 -f https://download.pytorch.org/whl/torch_stable.html
+```
+4. Install FAISS with GPU support: 
+```
+pip install faiss-gpu==1.7.2
+```
+5. Install requirements:
+```
+pip install -r requirements.txt
+```
 
 # Models and indices
 1. Download one of the pre-trained atlas models (available on ATLAS page: https://github.com/facebookresearch/atlas?tab=readme-ov-file#installation). For example base:
