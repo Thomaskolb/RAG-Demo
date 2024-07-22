@@ -25,7 +25,7 @@ pip install -r requirements.txt
 ```
 python3 atlas/preprocessing/download_model.py --model models/atlas/base --output_directory {MODEL_DIR}
 ```
-2. Download the indices shard files from ATLAS. For example base:
+2. Download the indices shard files from ATLAS. These are 127 files that we will build our (smaller) index from in the next step. For example base:
 ```
 python atlas/preprocessing/download_index.py --index indices/atlas/wiki/base --output_directory {INDEX_DIR} 
 ```
